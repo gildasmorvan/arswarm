@@ -1,0 +1,14 @@
+#!/usr/bin/expect
+
+set timeout 5
+set configfile [open wifi.sh]
+set configtext [read -nonewline $configfile]
+close $configfile
+
+spawn telnet 192.168.1.1 
+expect -re "#"
+send "echo $configtext > /data/wifi.sh\n"
+expect -re "#"
+send "chmod a+x /data/wifi.sh\n"
+expect -re "#"
+send "/data/./wifi.sh\n"
