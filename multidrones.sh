@@ -6,26 +6,33 @@
 #
 #	multidrones.sh: A bash script to configure multiple ar drones 2 on the same unencrypted network
 #
-#	Author: Gildas Morvan mail:gildas.morvan@univ-artois.fr homepage:http://www.lgi2a.univ-artois.fr/~morvan/
+#	Author: Gildas Morvan 
+#		mail:gildas.morvan@univ-artois.fr 
+#		homepage:http://www.lgi2a.univ-artois.fr/~morvan/
 #
 #
 ##########################################################################################################################
 
-#
+#Get OS name
 os=`uname`
 
 #Wifi interface name of the computer running the script
 #Mac Os: generally en0 or en1; Linux : generally eth0 or eth1
-interface=en1
+if [ "$os" == 'Linux' ]; then
+     #Linux specific code
+     interface=eth0
+elif [ "$os" == 'Darwin' ]; then
+     #Mac OS specific code
+     interface=en1
+fi
 
 #Name of the unencrypted network
 network=DRONES
 
-mainnetwork=totocaca
+mainnetwork=Irsf_UArtois
 
 #Last 6 digits of the drone  SSIDs
-#declare -a ardronesnetworks=(090658 290876)
-declare -a ardronesnetworks=(290876)
+declare -a ardronesnetworks=(090658 290876)
 
 
 #IP of the drones: 192.168.1.$ip
@@ -45,9 +52,10 @@ do
    fi
 
 	sleep 10
-   #Reconfigure the drone's network connections
+   #Write the network configuration script of the drone
    echo "killall udhcpd; ifconfig ath0 down; iwconfig ath0 mode managed essid $network; ifconfig ath0 192.168.1.$ip netmask 255.255.255.0 up; route add default gw 192.168.1.1; exit" > wifi.sh
- expect -f multidrones.expect
+   #Reconfigure the drone's network connections with multidrones.expect
+   expect -f multidrones.expect
 
    ip=$((ip+1))
 done
@@ -66,12 +74,6 @@ elif [ "$os" == 'Darwin' ]; then
           networksetup -setairportnetwork $interface $network
           sudo networksetup -setmanual Wi-Fi 192.168.1.2 255.255.255.0 192.168.1.1
 fi
-
-#sudo networksetup -setmanual Ethernet 192.168.1.2 255.255.255.0 192.168.1.1
-
-
-#Execute missions
-#node multidrones.js
 
 #Back the computer running the script to a normal network configuration
 
