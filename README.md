@@ -1,15 +1,17 @@
-#multidrones#
+#multidrones
 
 multidrones is a set of bash and expect scripts to connect and configure multiple [Parrot ar drones 2](http://ardrone2.parrot.com/) on the same unencrypted network.
 
-##Contributor##
+#Contributor
+
 Gildas Morvan - [mail](mailto:gildas.morvan@univ-artois.fr) - [homepage](http://www.lgi2a.univ-artois.fr/~morvan/)
 
-##Requirements
+#Requirements
+
 multidrones should run on Mac OS X (Darwin) and Linux-based systems since **[Bash](http://tiswww.case.edu/php/chet/bash/bashtop.html)**  and **[Expect](http://expect.sourceforge.net/)** are installed.
 
 
-##Usage##
+#Usage
 
 To connect multiple ar drones, first edit the multidrones.sh file.
 	
