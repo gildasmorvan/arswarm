@@ -6,7 +6,7 @@ multidrones is a set of bash and expect scripts to connect and configure multipl
 
 Gildas Morvan - [mail](mailto:gildas.morvan@univ-artois.fr) - [homepage](http://www.lgi2a.univ-artois.fr/~morvan/)
 
-Julien Jonathan [mail](mailto:julien_jonathan@ens.univ-artois.fr) and Dylan Cossart (mailto:dylan_cossart@ens.univ-artois.fr) provided support for testing and running the example.
+Julien Jonathan [(mail)](mailto:julien_jonathan@ens.univ-artois.fr) and Dylan Cossart [(mail)](mailto:dylan_cossart@ens.univ-artois.fr) provided support for testing and running the example.
 
 ## Requirements
 
