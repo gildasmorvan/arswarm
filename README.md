@@ -60,9 +60,4 @@ drones.forEach(function(drone){
 });
 ```
 
-should give something like this
-
-<video width="568" height="320" autoplay="autoplay" loop>
-  <source src="example.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+should give something like <a href="example.mp4">this</a>
