@@ -60,4 +60,4 @@ drones.forEach(function(drone){
 });
 ```
 
-should give something like <a href="example.mp4">this</a>
+should give something like [this](example.mp4).
