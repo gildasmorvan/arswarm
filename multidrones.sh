@@ -32,7 +32,7 @@ network=DRONES
 mainnetwork=Irsf_UArtois
 
 #Last 6 digits of the drone  SSIDs
-declare -a ardronesnetworks=(090658 290876)
+declare -a ardronesnetworks=(identification)
 
 
 #IP of the drones: 192.168.1.$ip
