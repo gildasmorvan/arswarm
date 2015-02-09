@@ -53,7 +53,7 @@ var drones = [
               
 drones.forEach(function(drone){
    drone.takeoff();
-   drone.after(6000,function(){
+   drone.after(10000,function(){
       this.stop();
       this.land();
    });
