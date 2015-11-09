@@ -68,4 +68,4 @@ should give something like [this](example.mp4).
 
 
 You can also make some flips.
-[![ScreenShot](http://iut.univ-tours.fr/medias/photo/geii-web_1413573760106-gif)](https://youtu.be/y831UM1GfXM)
+[![ScreenShot](video.png)](https://youtu.be/y831UM1GfXM)
