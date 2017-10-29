@@ -1,6 +1,6 @@
-# multidrones
+# arswarm
 
-multidrones is a set of bash and expect scripts to connect and configure multiple [Parrot ar drones 2](http://ardrone2.parrot.com/) on the same unencrypted network.
+arswarm is a set of bash and expect scripts to connect and configure multiple [Parrot ar drones 2](http://ardrone2.parrot.com/) on the same unencrypted network.
 
 ## Contributors
 
@@ -10,12 +10,12 @@ with [Dylan Cossart](mailto:dylan_cossart@ens.univ-artois.fr), [Julien Jonathan]
 
 ## Requirements
 
-multidrones should run on OS X (Darwin) and Linux-based systems since **[Bash](http://tiswww.case.edu/php/chet/bash/bashtop.html)**, **[Expect](http://expect.sourceforge.net/)** and a **[Telnet](http://en.wikipedia.org/wiki/Telnet)** client are installed.
+arswarm should run on OS X (Darwin) and Linux-based systems since **[Bash](http://tiswww.case.edu/php/chet/bash/bashtop.html)**, **[Expect](http://expect.sourceforge.net/)** and a **[Telnet](http://en.wikipedia.org/wiki/Telnet)** client are installed.
 
 
 ## Usage
 
-To connect multiple ar drones, first edit the multidrones.sh file.
+To connect multiple ar drones, first edit the arswarm.sh file.
 	
 Set the name of the wifi interface of your computer using the variable `interface` (OS X: generally `en0` or `en1`; Linux : generally `eth0` or `eth1`). For instance: 
 
@@ -35,12 +35,12 @@ The drones IP addresses will be set to 192.168.1.3-x. It can be changed using th
 
 Then, authorize the scripts to be executed
 	
-        chmod a+x multidrones.sh multidrones.expect
+        chmod a+x arswarm.sh arswarm.expect
 
 
 Finally, run the main script
 
-        ./multidrones.sh
+        ./arswarm.sh
 
 You can now control all the drones at the same time using, e.g., using the [node.js ar-drone module](http://nodecopter.com/).
 
