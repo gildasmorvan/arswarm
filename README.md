@@ -2,6 +2,12 @@
 
 arswarm is a set of bash and expect scripts to connect and configure multiple [Parrot ar drones 2](http://ardrone2.parrot.com/) on the same unencrypted network.
 
+##  License
+
+arswarm is distributed under the [CeCILL-B license](http://cecill.info). In a few words, "if the initial program is under CeCILL-B, you can distribute your program under any license that you want (without the need to distribute the source code) provided you properly mention the use that you did of the initial program" (from the [CeCILL FAQ](http://www.cecill.info/faq.en.html#differences) ).
+
+See the file  [LICENSE.txt](LICENSE.txt) for more information.
+
 ## Contributors
 
 Gildas Morvan - [mail](mailto:gildas.morvan@univ-artois.fr) - [homepage](http://www.lgi2a.univ-artois.fr/~morvan/)
