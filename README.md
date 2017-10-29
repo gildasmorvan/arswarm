@@ -10,7 +10,7 @@ with [Dylan Cossart](mailto:dylan_cossart@ens.univ-artois.fr), [Julien Jonathan]
 
 ## Requirements
 
-arswarm should run on OS X (Darwin) and Linux-based systems since **[Bash](http://tiswww.case.edu/php/chet/bash/bashtop.html)**, **[Expect](http://expect.sourceforge.net/)** and a **[Telnet](http://en.wikipedia.org/wiki/Telnet)** client are installed.
+arswarm should run on macOS (Darwin) and Linux-based systems since **[Bash](http://tiswww.case.edu/php/chet/bash/bashtop.html)**, **[Expect](http://expect.sourceforge.net/)** and a **[Telnet](http://en.wikipedia.org/wiki/Telnet)** client are installed.
 
 
 ## Usage
