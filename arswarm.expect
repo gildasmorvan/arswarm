@@ -3,7 +3,7 @@
 ##########################################################################################################################
 #
 #
-#	multidrones.expect: An Expect script that reconfigure an ar drone 2 using telnet from a bash script called wifi.sh
+#	arswarm.expect: An Expect script that reconfigure an ar drone 2 using telnet from a bash script called wifi.sh
 #
 #
 #	Example of wifi.sh: 
