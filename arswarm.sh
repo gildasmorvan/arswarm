@@ -4,7 +4,7 @@
 ##########################################################################################################################
 #
 #
-#	multidrones.sh: A bash script to configure multiple ar drones 2 on the same unencrypted network
+#	arswarm.sh: A bash script to configure multiple ar drones 2 on the same unencrypted network
 #
 #	Author: Gildas Morvan 
 #	mail:gildas.morvan@univ-artois.fr
@@ -48,7 +48,7 @@ do
    #Write the network configuration script of the drone
    echo "killall udhcpd; ifconfig ath0 down; iwconfig ath0 mode managed essid $network; ifconfig ath0 192.168.1.$ip netmask 255.255.255.0 up; route add default gw 192.168.1.1; exit" > wifi.sh
    #Reconfigure the drone's network connections with multidrones.expect
-   expect -f multidrones.expect
+   expect -f arswarm.expect
 
    ip=$((ip+1))
 done
@@ -64,6 +64,6 @@ if [ "$os" == 'Linux' ]; then
    sudo ifconfig $interface 192.168.1.2 netmask 255.255.255.0 up
 elif [ "$os" == 'Darwin' ]; then
    #Mac OS specific code
-          networksetup -setairportnetwork $interface $network
-          sudo networksetup -setmanual Wi-Fi 192.168.1.2 255.255.255.0 192.168.1.1
+   networksetup -setairportnetwork $interface $network
+   sudo networksetup -setmanual Wi-Fi 192.168.1.2 255.255.255.0 192.168.1.1
 fi
